@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Pth-model-transient by HumMod</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Pth-model-transient</h1>
+        <p>A mathematical model of dynamic PTH secretion in response to a calcium function.</p>
+
+        <p class="view"><a href="https://github.com/HumMod/pth-model-transient">View the Project on GitHub <small>HumMod/pth-model-transient</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/HumMod/pth-model-transient/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/HumMod/pth-model-transient/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/HumMod/pth-model-transient">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h3>Transient PTH Model</h3>
+
+<p>This mathematical model details the dynamics of PTH secretion in response to a fixed calcium function.  It reduces to Brown's four parameter model (Brown, 1983) when constrained to steady state.  Two versions of the code are presented; one in <a href="http://www.Wolfram.com/mathematica">Mathematica</a>, the other in the HumMod schema for use with DESolver.exe located on the <a href="https://github.com/HumMod">HumMod</a> GitHub site.  </p>
+
+<h3>Mathematica Files</h3>
+
+<p>These files contain the fitting algorithms used to generate parameterizations for the transient PTH model.  Data sets are used to both parameterize and validate the model; in particular, one interval of an experiment is used for fitting parameters, and the next interval of each experiment is used for testing the model predictions.  The experimental PTH data is given in list form (Pexp and PexpLong) associated to a list of times at which measurements were taken (texp and texpLong).  The -Long suffix is the full list, while the non-suffixed list is used for parameterization.  The fits are performed by minimizing a least squares function over the parameter space; this format was used due to the individual nature of the tests involved.</p>
+
+<h3>HumMod files</h3>
+
+<p>A single model file, ssPTH.DES is currently included in this folder.  The model shows the steady state predictions of the transient model, and allows a "hands-on" consideration of the sensitivity of the model on the parameters.  The file should be opened in Model Editor.exe, also included.  For the purpose of solving the model, the file DESolver.exe is also included.  To run ssPTH.DES, open it in Model Editor.exe.  Right click anywhere in the model text and select "Make this model root".  In the "Options" tab, click "Controller-Solver" and select "Combined controller and solver".  Browse to select DESolver.exe as the Controller-Solver and click Apply.  Run the model from the tabs in the main Model Editor viewpane.  </p>
+
+<h3>Authors and Contributors</h3>
+
+<p>This model was written by W Andrew Pruett and Robert L Hester.  Any comments or questions can be addressed as an issue on the HumMod github page under the repository "PTH-model-transient" or addressed to <a href="mailto:wpruett@umc.edu">wpruett@umc.edu</a>.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/HumMod">HumMod</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
